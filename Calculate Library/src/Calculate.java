@@ -36,8 +36,17 @@ public class Calculate {
 		return radian;
 	}
 	
-	public static double discriminant(double coefA, double coefB, double coefC) {
-		double 
+	public static double discriminant (double coefA, double coefB, double coefC) {
+		double disc = (coefB*coefB) - (4*coefA*coefC);
+		return disc;
 	}
+	
+	public static String toImproperFrac (int wholeNum, int numerNum, int denomNum) {
+		int impNum = (wholeNum*denomNum) + numerNum;
+		String impFrac = impNum + "/" + denomNum;
+		return impFrac;
+	}
+	
+	public 
 	
 }
