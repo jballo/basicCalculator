@@ -9,6 +9,8 @@ public class DoMath {
 		System.out.println(Calculate.cube(-3));
 		System.out.println(Calculate.average(6,5));
 		System.out.println(Calculate.average(4, 6, 9));
+		System.out.println(Calculate.toDegrees(-3));
+		System.out.println(Calculate.toRadians(79));
 	}
 
 }

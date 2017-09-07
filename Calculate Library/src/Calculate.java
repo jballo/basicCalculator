@@ -31,4 +31,13 @@ public class Calculate {
 		return degree;
 	}
 	
+	public static double toRadians (double degrees) {
+		double radian = (degrees*3.14159)/180;
+		return radian;
+	}
+	
+	public static double discriminant(double coefA, double coefB, double coefC) {
+		double 
+	}
+	
 }
