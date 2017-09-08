@@ -62,9 +62,9 @@ public class Calculate {
 		return equation;
 	}
 	
-	public static int isDivisibleBy (int num, int denom) {
-		if(num%denom >= 1) {
-			return 
-		}
-	}
+	//public static int isDivisibleBy (int num, int denom) {
+	//	if(num%denom >= 1) {
+	//		return 
+	//	}
+	//}
 }
