@@ -11,6 +11,10 @@ public class DoMath {
 		System.out.println(Calculate.average(4, 6, 9));
 		System.out.println(Calculate.toDegrees(-3));
 		System.out.println(Calculate.toRadians(79));
+		System.out.println(Calculate.discriminant(4, 6, 9));
+		System.out.println(Calculate.toImproperFrac(9, 6, 2));
+		System.out.println(Calculate.toMixed(9, 2));
+		System.out.println(Calculate.foil(3, 6, 7, 2, n));
 	}
 
 }

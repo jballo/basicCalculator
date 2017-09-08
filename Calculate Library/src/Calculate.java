@@ -36,8 +36,35 @@ public class Calculate {
 		return radian;
 	}
 	
-	public static double discriminant(double coefA, double coefB, double coefC) {
-		double 
+	public static double discriminant (double coefA, double coefB, double coefC) {
+		double disc = (coefB*coefB) - (4*coefA*coefC);
+		return disc;
 	}
 	
+	public static String toImproperFrac (int wholeNum, int numerNum, int denomNum) {
+		int impNum = (wholeNum*denomNum) + numerNum;
+		String impFrac = impNum + "/" + denomNum;
+		return impFrac;
+	}
+	
+	public static String toMixed ( int impNumer, int denom) {
+		int wholeNum = impNumer/denom;
+		int mixNumer = impNumer%denom;
+		String imprFrac = wholeNum + "_" + mixNumer + "/" + denom;
+		return imprFrac;
+	}
+	
+	public static String foil ( int varA, int varB, int varC, int varD, String input) {
+		String vara = (varA*varB) + input + "^2";
+		String varb = (varA*varC) + (varA*varD) + input;
+		double varc = varB*varD;
+		String equation = vara + " + " + varb + " + " + varc;
+		return equation;
+	}
+	
+	public static int isDivisibleBy (int num, int denom) {
+		if(num%denom >= 1) {
+			return 
+		}
+	}
 }
