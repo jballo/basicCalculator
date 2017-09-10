@@ -54,17 +54,61 @@ public class Calculate {
 		return imprFrac;
 	}
 	
-	public static String foil ( int varA, int varB, int varC, int varD, String input) {
+	/*public static String foil ( int varA, int varB, int varC, int varD, String input) {
 		String vara = (varA*varB) + input + "^2";
 		String varb = (varA*varC) + (varA*varD) + input;
 		double varc = varB*varD;
 		String equation = vara + " + " + varb + " + " + varc;
 		return equation;
 	}
+*/
+	public static String isDisvisibleBy (int dividend, int divisor) {
+		if(dividend%divisor == 0) {
+			return "Yes";
+		}else {
+			return "No";
+		}
+	}
 	
-	//public static int isDivisibleBy (int num, int denom) {
-	//	if(num%denom >= 1) {
-	//		return 
-	//	}
-	//}
+	public static double absValue (double numb) {
+		if(numb <=0) {
+			return (numb*-1);
+		}else {
+			return numb;
+		}
+	}
+	
+	public static double max (double frstNum, double secNum) {
+		if(frstNum > secNum) {
+			return frstNum;
+		}else if(secNum> frstNum){
+			return secNum;
+		}else{
+			return frstNum;
+		}
+	}
+	
+	public static double max (double frstNum, double secNum, double thrdNum) {
+		if(frstNum > secNum && frstNum > thrdNum) {
+			return frstNum;
+		}else if(secNum > frstNum && secNum > thrdNum) {
+			return secNum;
+		}else{
+			return thrdNum;
+		}
+	}
+	
+	public static double min (int frstNum, int secNum) {
+		if(frstNum < secNum) {
+			return frstNum;
+		}else {
+			return secNum;
+		}
+	}
+	
+	/*public static double round2(double rdNum){
+		if() {
+			
+		}
+	}*/
 }

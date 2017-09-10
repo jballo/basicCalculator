@@ -14,7 +14,12 @@ public class DoMath {
 		System.out.println(Calculate.discriminant(4, 6, 9));
 		System.out.println(Calculate.toImproperFrac(9, 6, 2));
 		System.out.println(Calculate.toMixed(9, 2));
-		//System.out.println(Calculate.foil(3, 6, 7, 2, ));
+		//System.out.println(Calculate.foil(3, 6, 7, 2, no));
+		System.out.println(Calculate.isDisvisibleBy(6, 4));
+		System.out.println(Calculate.absValue(-3.17));
+		System.out.println(Calculate.max(-9.731, 9.01));
+		System.out.println(Calculate.max(7.2, -0.01, 10));
+		System.out.println(Calculate.min(6, 9));
 	}
 
 }
