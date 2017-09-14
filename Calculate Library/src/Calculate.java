@@ -54,14 +54,14 @@ public class Calculate {
 		return imprFrac;
 	}
 	
-	/*public static String foil ( int varA, int varB, int varC, int varD, String input) {
+	public static String foil ( int varA, int varB, int varC, int varD, String input) {
 		String vara = (varA*varB) + input + "^2";
 		String varb = (varA*varC) + (varA*varD) + input;
-		double varc = varB*varD;
+		int varc = varB*varD;
 		String equation = vara + " + " + varb + " + " + varc;
 		return equation;
 	}
-*/
+
 	public static String isDisvisibleBy (int dividend, int divisor) {
 		if(dividend%divisor == 0) {
 			return "Yes";
