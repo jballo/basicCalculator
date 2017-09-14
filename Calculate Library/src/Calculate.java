@@ -106,9 +106,9 @@ public class Calculate {
 		}
 	}
 	
-	/*public static double round2(double rdNum){
+	public static double round2(double rdNum){
 		if() {
 			
 		}
-	}*/
+	}
 }
