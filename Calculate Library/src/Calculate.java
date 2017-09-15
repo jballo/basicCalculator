@@ -106,9 +106,23 @@ public class Calculate {
 		}
 	}
 	
-	public static double round2(double rdNum){
-		if() {
-			
+	public static double round2 (double rdNum){
+		double newNum = rdNum * 1000;
+		double takeAwayNum = newNum % 10;
+		
+		if(newNum > 0) {
+			if(newNum%10 >=5 ) {
+				newNum = newNum - takeAwayNum;
+				newNum = newNum + 10;
+				newNum = newNum/1000;
+			}
+		}else {
+			if(newNum%10 <= 5){
+				newNum = newNum - takeAwayNum;
+				newNum = newNum - 10;
+				newNum = newNum/1000;
+			}
 		}
+		return newNum;
 	}
 }
