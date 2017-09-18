@@ -62,11 +62,11 @@ public class Calculate {
 		return equation;
 	}
 
-	public static String isDisvisibleBy (int dividend, int divisor) {
+	public static boolean isDisvisibleBy (int dividend, int divisor) {
 		if(dividend%divisor == 0) {
-			return "Yes";
+			return true;
 		}else {
-			return "No";
+			return false;
 		}
 	}
 	
@@ -125,4 +125,37 @@ public class Calculate {
 		}
 		return newNum;
 	}
+	
+	public static double exponent (double val, int exp){
+		double prod= 1;
+		for(int i = 0; i < exp;i++) {
+			prod = prod * val;
+		}
+		return prod;
+	} 
+	
+	public static int factorial (int fac) {
+		int val = 1;
+		for(int i = 1; i <= fac; i++){
+			val = val * i;
+		}
+		return val;
+	}
+	
+	/*public static boolean isPrime (int chkPNUM) {
+		int counter = 0;
+		
+	}*/
+	
+	public static int gcd(int aval, int bval) {
+		if (bval == 0) {
+			if(aval < 0){
+				return aval;
+			}else {
+				return a%b;
+			}
+		}
+	}
+	
+	
 }
