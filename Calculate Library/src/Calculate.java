@@ -107,22 +107,20 @@ public class Calculate {
 	}
 	
 	public static double round2 (double rdNum){
-		double newNum = rdNum * 1000;
-		double takeAwayNum = newNum % 10;
-		
-		if(newNum > 0) {
-			if(newNum%10 >=5 ) {
-				newNum = newNum - takeAwayNum;
-				newNum = newNum + 10;
-				newNum = newNum/1000;
+		double newNum = rdNum * 100;
+		double takeAwayNum = newNum % 1;
+		if(newNum >= 0) {
+			if(newNum%1 >= 0.5 ) {
+				newNum = newNum + 1;
 			}
+			newNum = newNum - takeAwayNum;
 		}else {
-			if(newNum%10 <= 5){
-				newNum = newNum - takeAwayNum;
-				newNum = newNum - 10;
-				newNum = newNum/1000;
+			if(takeAwayNum <= -0.5){
+				newNum = newNum - 1;		
 			}
+			newNum = newNum - takeAwayNum;
 		}
+		newNum = newNum/100;
 		return newNum;
 	}
 	
@@ -142,20 +140,48 @@ public class Calculate {
 		return val;
 	}
 	
-	/*public static boolean isPrime (int chkPNUM) {
-		int counter = 0;
-		
+	/*public static boolean isPrime (int chkPrmNum) {
+		int currentGrtDivid = 1;
+		for(int i = chkPrmNum; i <= 0; i--) {
+			for(int j = 1; j <= chkPrmNum; j++) {
+				if(( i* j) == chkPrmNum){
+					if( j > currentGrtDivid) {
+						currentGrtDivid = j;
+					}
+				}
+			}
+		}
+		if(currentGrtDivid == 1){
+			return true;
+		}else {
+			return false;
+		}
 	}*/
 	
-	public static int gcd(int aval, int bval) {
-		if (bval == 0) {
-			if(aval < 0){
-				return aval;
-			}else {
-				return a%b;
+	public static boolean isPrime (int chkPrmNum) {
+		int currentGrtDivid = 1;
+		if(chkPrmNum != 1) {
+			for(int i = 1; i < chkPrmNum; i++){
+				if(Calculate.isDisvisibleBy(chkPrmNum, i)) {
+					if(i > currentGrtDivid) {
+						currentGrtDivid = i;
+					}
+				}
 			}
+			if(currentGrtDivid == 1) {
+				return true;
+			}else {
+				return false;
+			}
+		}else {
+			return false;
 		}
 	}
 	
-	
+	public static int gcd (int aval, int bval) {
+		int frstPrimeFac = 1;
+		//int secPrimeFac = 1;
+		//int thrdPrimeFac = 1;
+		for(int i = 1; i < )
+	}
 }
