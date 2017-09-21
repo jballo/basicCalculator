@@ -24,5 +24,6 @@ public class DoMath {
 		//System.out.println(Calculate.exponent(9, 4));
 		//System.out.println(Calculate.factorial(4));
 		System.out.println(Calculate.isPrime(13));
+		System.out.println(Calculate.gcd(125, 25));
 	}
 }

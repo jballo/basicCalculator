@@ -140,24 +140,6 @@ public class Calculate {
 		return val;
 	}
 	
-	/*public static boolean isPrime (int chkPrmNum) {
-		int currentGrtDivid = 1;
-		for(int i = chkPrmNum; i <= 0; i--) {
-			for(int j = 1; j <= chkPrmNum; j++) {
-				if(( i* j) == chkPrmNum){
-					if( j > currentGrtDivid) {
-						currentGrtDivid = j;
-					}
-				}
-			}
-		}
-		if(currentGrtDivid == 1){
-			return true;
-		}else {
-			return false;
-		}
-	}*/
-	
 	public static boolean isPrime (int chkPrmNum) {
 		int currentGrtDivid = 1;
 		if(chkPrmNum != 1) {
@@ -178,10 +160,40 @@ public class Calculate {
 		}
 	}
 	
-	public static int gcd (int aval, int bval) {
+	/*public static int gcd (int aval, int bval) {
 		int frstPrimeFac = 1;
-		//int secPrimeFac = 1;
-		//int thrdPrimeFac = 1;
-		for(int i = 1; i < )
+		int secPrimeFac = 1;
+		int thrdPrimeFac = 1;
+		int grtCmnFac = 0;
+		for(int i = 1; i < (int)Calculate.min(aval, bval); i++) {
+			if(Calculate.isDisvisibleBy(aval, i) == true && Calculate.isDisvisibleBy(bval, i) == true){
+				if(Calculate.isPrime(i) == true) {
+					if(i > frstPrimeFac) {
+						thrdPrimeFac = secPrimeFac;
+						secPrimeFac = frstPrimeFac;
+						frstPrimeFac = i;
+					}
+				}
+			}
+		//grtCmnFac = frstPrimeFac * secPrimeFac * thrdPrimeFac;
+		}
+		grtCmnFac = frstPrimeFac * secPrimeFac * thrdPrimeFac;
+		return grtCmnFac;
+	}*/	
+	public static int gcd (int aval, int bval) {
+		int crntGrtFac = 1;
+		for (int i = 1; i <= (int)Calculate.min(aval, bval); i++){
+			if(Calculate.isDisvisibleBy(aval, i) == true && Calculate.isDisvisibleBy(bval, i) == true) {
+				if(i > crntGrtFac) {
+					crntGrtFac = i;
+				}
+			}
+		}
+		return crntGrtFac;
+	}
+	
+	public static double sqrt (double val2Sqrt) {
+		
 	}
 }
+
