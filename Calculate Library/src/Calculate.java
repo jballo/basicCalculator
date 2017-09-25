@@ -194,3 +194,7 @@ public class Calculate {
 	}
 }
 
+//public static int quadForm(int valA, int valB, int valC, int valD) {
+	//int
+//}
+
