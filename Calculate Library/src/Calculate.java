@@ -160,26 +160,6 @@ public class Calculate {
 		}
 	}
 	
-	/*public static int gcd (int aval, int bval) {
-		int frstPrimeFac = 1;
-		int secPrimeFac = 1;
-		int thrdPrimeFac = 1;
-		int grtCmnFac = 0;
-		for(int i = 1; i < (int)Calculate.min(aval, bval); i++) {
-			if(Calculate.isDisvisibleBy(aval, i) == true && Calculate.isDisvisibleBy(bval, i) == true){
-				if(Calculate.isPrime(i) == true) {
-					if(i > frstPrimeFac) {
-						thrdPrimeFac = secPrimeFac;
-						secPrimeFac = frstPrimeFac;
-						frstPrimeFac = i;
-					}
-				}
-			}
-		//grtCmnFac = frstPrimeFac * secPrimeFac * thrdPrimeFac;
-		}
-		grtCmnFac = frstPrimeFac * secPrimeFac * thrdPrimeFac;
-		return grtCmnFac;
-	}*/	
 	public static int gcd (int aval, int bval) {
 		int crntGrtFac = 1;
 		for (int i = 1; i <= (int)Calculate.min(aval, bval); i++){
@@ -192,8 +172,25 @@ public class Calculate {
 		return crntGrtFac;
 	}
 	
-	public static double sqrt (double val2Sqrt) {
-		
+	public static double sqrt (double valToSqrt) {
+		double crntSqrt = 0;
+		if(valToSqrt >= 0) {
+			for(double i = 0; i < valToSqrt; i+=0.0001) {
+				if(i*i <= valToSqrt) {
+					crntSqrt = i;
+				}
+			}
+		}else {
+			valToSqrt*=-1;
+			for(double i = 0; i < valToSqrt; i+=0.0001) {
+				if(i*i <= valToSqrt) {
+					crntSqrt = i;
+				}
+			}
+			valToSqrt*=-1;
+			return Calculate.round2(crntSqrt);
+		}
+		return Calculate.round2(crntSqrt);
 	}
 }
 
