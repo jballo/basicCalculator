@@ -181,20 +181,24 @@ public class Calculate {
 				}
 			}
 		}else {
-			valToSqrt*=-1;
-			for(double i = 0; i < valToSqrt; i+=0.0001) {
-				if(i*i <= valToSqrt) {
-					crntSqrt = i;
-				}
-			}
-			valToSqrt*=-1;
-			return Calculate.round2(crntSqrt);
+			throw new IllegalArgumentException(valToSqrt + " is a negative number.");
 		}
 		return Calculate.round2(crntSqrt);
 	}
-}
 
-//public static int quadForm(int valA, int valB, int valC, int valD) {
-	//int
-//}
+	public static String quadForm(int a, int b, int c) {
+		double disc = Calculate.discriminant(a, b, c);
+		double rootA = (((-b) + Calculate.sqrt(disc))/(2*a));
+		double rootB = (((-b) - Calculate.sqrt(disc))/(2*a));
+		String roots = "";
+		if(disc < 0) {
+				roots = "no real roots";
+		}else if(rootA == rootB) {
+			roots = roots + Calculate.round2(rootA);
+		}else {
+			roots = roots + Calculate.round2(rootA) + " and " + Calculate.round2(rootB);
+		}
+		return roots;
+	}
+}
 
